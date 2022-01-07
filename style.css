@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+/* common */
+
+*, *::before, *::after {
+  /* 全体にborder-boxの指定 */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* 文字のメインスタイル */
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+h1, h2, h3, p {
+  /* 文字要素のスタイル初期化 */
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size:  36px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+section {
+  text-align: center;
+}
+
+.u-content-wrapper {
+  /* 各セクションのwrapper幅指定 */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  background: url('img/header.png');
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.header__nav {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+
+.header__nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav__logo {
+  font-size: 36px;
+}
+
+.hamburger-menu { 
+  position: relative;
+  width: 32px;
+  height: 64px;
+  cursor: pointer;
+}
+
+.hamburger-menu__line,
+.hamburger-menu__line::before,
+.hamburger-menu__line::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #fff; 
+}
+
+.hamburger-menu__line::before,
+.hamburger-menu__line::after {
+  content: '';
+}
+
+.hamburger-menu__line {
+  top: 50%;
+}
+
+.hamburger-menu__line::before {
+  top: calc(50% + 8px);
+}
+
+.hamburger-menu__line::after {
+  top: calc(50% + 8px);
+}
+
+.header__title {
+  padding-top: 240px;
+  font-size: 120px;
+  font-weight: normal;
+}
+
+.header__title__sub::before,
+.header__title__sub::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* concept section */
+
+.u-heading {
+  position: relative;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  padding-top: 80px;
+}
+
+.u-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  height: 1px;
+  background: #2b2b2b;
+  transform: translateX(-50%);
+}
+
+.u-text {
+  width: 100%;
+  line-height: 1.8;
+  letter-spacing: 1.4px;
+  margin-bottom: 40px;
+}
+
+.concept {
+  background: linear-gradient(#fff 70%, #ededed 30%);
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.concept-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; 
+}
+
+/* work section */
+.work {
+  width: 100%;
+}
+
+.work__contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 1680px;
+}
+
+.work__content {
+  width: 420px;
+  padding-bottom: 80px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.work__content:nth-of-type(1) {
+  order: 1;
+}
+
+.work__content:nth-of-type(2) {
+  order: 3;
+  margin-top: 120px;
+}
+
+.work__content:nth-of-type(3) {
+  order: 2;
+}
+
+.work__content:nth-of-type(4) {
+  order: 4;
+}
+
+.work__content img {
+  margin-bottom: 16px;
+}
+
+.work__content p {
+  line-height: 28px;
+}
+
+/* florist */
+.florist {
+  background: linear-gradient(#ededed 60% ,#fff 40%);
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.florist__intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.florist__content {
+  text-align: left;
+  width: 300px;
+  line-height: 28px;
+}
+
+/* shop information */
+.shop-information__contents {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+  width: 100%;
+  align-items: center;
+}
+
+.shop-information__img {
+  width: 50%;
+}
+
+.shop-information__table {
+  width: 45%;
+  border-spacing: 16px 1rem;
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 2;
+}
+
+
+.shop-information__table th {
+  width: 25%;
+  border-right: 1px solid #a0a0a0;
+  vertical-align: top;
+}
+
+/* contact */
+.contact {
+  background: url(img/contact_us.png);
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+}
+
+.contactform {
+  display:inline-block;
+  background: #fff;
+  width: 360px;
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+  border: 1px solid #a0a0a0;
+}
+
+.contactform::before,
+.contactform::after {
+  content: '';
+  position: absolute;
+  border-radius: 2px;
+}
+.contactform::before {
+  top: 30px;
+  left: 85px;
+  width: 30px;
+  height: 20px;
+  border: 1px solid #2b2b2b;
+}
+.contactform::after {
+  top: 21px;
+  left: 90px;
+  width: 20px;
+  height: 20px;
+  border-right: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  transform: rotate(45deg);
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  margin: 12px auto;
+}
