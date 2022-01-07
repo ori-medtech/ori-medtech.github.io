@@ -83,36 +83,39 @@ section {
 .hamburger-menu { 
   position: relative;
   width: 32px;
-  height: 64px;
+  height: 4px;
   cursor: pointer;
+  color: #fff;
+  background: currentColor;
+  z-index: 10;
 }
 
-.hamburger-menu__line,
-.hamburger-menu__line::before,
-.hamburger-menu__line::after {
+/* .hamburger-menu__line {
+  width: 100%;
+  height: 8px;
+  color: red;
+  background: currentColor;
+  position: relative;
+  margin-top: 10px;
+} */
+
+.hamburger-menu:before {
+  content: "";
   position: absolute;
-  left: 0;
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: #fff; 
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
 }
 
-.hamburger-menu__line::before,
-.hamburger-menu__line::after {
-  content: '';
-}
-
-.hamburger-menu__line {
-  top: 50%;
-}
-
-.hamburger-menu__line::before {
-  top: calc(50% + 8px);
-}
-
-.hamburger-menu__line::after {
-  top: calc(50% + 8px);
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  /* display: inline-block; */
 }
 
 .header__title {
