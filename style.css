@@ -93,8 +93,9 @@ section {
   content: "";
   position: absolute;
   top: -10px;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  width: 32px;
+  height: 4px;
   background: currentColor;
 }
 
@@ -102,8 +103,9 @@ section {
   content: "";
   position: absolute;
   top: 10px;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  width: 32px;
+  height: 4px;
   background: currentColor;
 }
 
