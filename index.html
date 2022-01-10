@@ -29,6 +29,15 @@
       <p class="header__title__sub">White flower shop</p>
     </div>
   </header>
+  <nav id="global-nav">
+    <ul class="header-menu">
+      <li><a href="#">Concept</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Florist</a></li>
+      <li><a href="#">Shop information</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+  </nav>
 
   <section class="concept">
     <div class="u-content-wrapper">
@@ -164,8 +173,18 @@
   crossorigin="anonymous"></script>
   <script>
     $('.hamburger-menu').on('click', ()=> {
-      $('.hamburger-menu').toggleClass('is-active')
-    }) 
+      $('.hamburger-menu').toggleClass('is-active');
+      $("#global-nav").slideToggle();
+      // $("#global-nav").fadeToggle();     
+    });
+ 
+    // $(window).scroll(function() {
+    //   if($(window).scrollTop > 40) {
+    //     $('.header-nav').addClass('fixed');
+    //   } else {
+    //     $('.header-nav').removeClass('fixed');
+    //   }
+    // });
   </script>
 </body>
 </html>
