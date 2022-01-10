@@ -126,10 +126,14 @@
 
   .shop-information__img,
   .shop-information__table {
-    width: 100%;   
+    width: 100%;  
+    max-width: 480px; 
     -webkit-appearance: none; 
   }
-
+  
+  .shop-information__table {
+    width: 100%;   
+  }
   .shop-information__table br {
     display: inline;
   }
