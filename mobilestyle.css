@@ -127,7 +127,7 @@
   .shop-information__img,
   .shop-information__table {
     width: 100%;  
-    max-width: 480px; 
+    max-height: 320px; 
     -webkit-appearance: none; 
   }
   
