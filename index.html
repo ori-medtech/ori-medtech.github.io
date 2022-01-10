@@ -16,13 +16,16 @@
     <div class="header__nav">
       <div class="u-content-wrapper header__nav__wrapper">
         <div class="header__nav__logo">Shiro</div>
-        <div class="hamburger-menu"></div>
+        <div class="hamburger-menu">
+          <div class="hamburger-menu_line1"></div>
+          <div class="hamburger-menu_line2"></div>
+          <div class="hamburger-menu_line3"></div>
         </div>
       </div>  
     </div>
     <div class="u-content-wrapper">
       <h1 class="header__title">Shiro</h1>
-      <p class="header__titile__sub">White flower shop</p>
+      <p class="header__title__sub">White flower shop</p>
     </div>
   </header>
 
@@ -38,7 +41,7 @@
     </section>
     
     <section class="work">
-      <div class="u-content-wrapper">
+      <div class="u-content-wrapper work__contents__wrapper">
         <h2 class="u-heading">Work</h2>
         <p class="u-text">
           オーダーメイドでのブーケ・アレンジメントのデザインのほか、<br>
@@ -46,22 +49,22 @@
           一人一人にあったご提案をさせていただきます。</p>
         <div class="work__contents">
           <div class="work__content">
-            <img src="img/work_gift.png" alt="ギフト用アレンジメント" >
+            <img src="img/work_gift.png" alt="ギフト用アレンジメント"  class="work__content__img">
             <h3>Gift</h3>
             <p>花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。</p>
           </div>
           <div class="work__content">
-            <img src="img/work_decoretion.png" alt="デコレーション">
+            <img src="img/work_decoretion.png" alt="デコレーション" class="work__content__img">
             <h3>Decoration</h3>
             <p>お写真を彩るお花を一輪から販売。一定期間のご契約で定期的にご自宅へ配送させていただくことも可能です。<br><br></p>
           </div>
           <div class="work__content">
-            <img src="img/work_wedding.png" alt="ウェディングブーケ">
+            <img src="img/work_wedding.png" alt="ウェディングブーケ" class="work__content__img">
             <h3>Wedding</h3>
             <p>ウエディングドレスに合わせたブーケや式場の雰囲気に合う装花をご提案。お打ち合わせの流れや回数、費用などにつきましてはお問い合わせください。</p>
           </div>
           <div class="work__content">
-            <img src="img/work_for_yourself.png" alt="ご自宅用花束">
+            <img src="img/work_for_yourself.png" alt="ご自宅用花束" class="work__content__img">
             <h3>For yourself</h3>
             <p>お部屋の雰囲気やライフスタイルをお聞きしてご自宅用の花束をご提案し、少しでも長く咲かせるコツもお教えします。花束にあった花瓶をご提案することも可能です。</p>
           </div>
@@ -102,41 +105,41 @@
       <p class="u-text">
         Shiroの店舗情報をご紹介します。
       </p>
-    <div class="shop-information__contents">
-      <div class="shop-information__img">
-        <img src="img/shop_information.png" alt="店舗イメージ">
+      <div class="shop-information__contents">
+        <div class="shop-information__img">
+          <img src="img/shop_information.png" alt="店舗イメージ">
+        </div>
+        <table class="shop-information__table"> 
+          <tr>
+            <th>住所</th>
+            <td>
+              〒810-0001<br>
+              福岡県福岡市中央区天神0-0-0
+            </td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>
+              0120-000-000
+            </td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>
+              11:00-20:30<br>
+              （定休日：水曜日）  
+            </td>
+          </tr>
+          <tr>
+            <th>アクセス</th>
+            <td>
+              天神駅12a出口から徒歩6分<br>
+              東京駅8b出口から徒歩12分
+            </td>
+          </tr>
+        </table>
       </div>
-      <table class="shop-information__table"> 
-        <tr>
-          <th>住所</th>
-          <td>
-            〒810-0001<br>
-            福岡県福岡市中央区天神0-0-0
-          </td>
-        </tr>
-        <tr>
-          <th>電話番号</th>
-          <td>
-            0120-000-000
-          </td>
-        </tr>
-        <tr>
-          <th>営業時間</th>
-          <td>
-            11:00-20:30<br>
-            （定休日：水曜日）  
-          </td>
-        </tr>
-        <tr>
-          <th>アクセス</th>
-          <td>
-            天神駅12a出口から徒歩6分<br>
-            東京駅8b出口から徒歩12分
-          </td>
-        </tr>
-      </table>
     </div>
-  </div>
   </section>  
 
   <section class="contact">
@@ -155,5 +158,13 @@
       <p class="copyright">Copyright © Shiro All Rights Reserved</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script>
+    $('.hamburger-menu').on('click', ()=> {
+      $('.hamburger-menu').toggleClass('is-active')
+    }) 
+  </script>
 </body>
 </html>

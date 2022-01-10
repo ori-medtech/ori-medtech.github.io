@@ -11,7 +11,6 @@ body {
   margin: 0;
   /* 文字のメインスタイル */
   font-family: sans-serif;
-  font-size: 16px;
   color: #2b2b2b;
 }
 
@@ -56,7 +55,7 @@ section {
   position: relative;
   width: 100%;
   height: 620px;
-  background: url('img/header.png');
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('img/header.png');
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -83,31 +82,52 @@ section {
 .hamburger-menu { 
   position: relative;
   width: 32px;
-  height: 4px;
+  height: 20px;
   cursor: pointer;
-  color: #fff;
-  background: currentColor;
 }
 
-.hamburger-menu:before {
-  content: "";
+.hamburger-menu_line1 {
   position: absolute;
-  top: -10px;
-  left: 0;
-  width: 32px;
-  height: 4px;
-  background: currentColor;
+  width: 100%;
+  height: 1px;
+  background: white;
+  top: calc(50% - 8px);
+  transition: all .3s;
 }
 
-.hamburger-menu:after {
-  content: "";
+.hamburger-menu_line2 {
   position: absolute;
-  top: 10px;
-  left: 0;
-  width: 32px;
-  height: 4px;
-  background: currentColor;
+  width: 100%;
+  height: 1px;
+  background: white;
+  top: 50%;
+  transition: all .3s;
 }
+
+.hamburger-menu_line3 {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: white;
+  top: calc(50% + 8px);
+  transition: all .3s;
+}
+
+.is-active > .hamburger-menu_line1 {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.is-active > .hamburger-menu_line2 {
+  opacity: 0;
+}
+
+.is-active > .hamburger-menu_line3 {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+
 
 .header__title {
   padding-top: 240px;
@@ -117,12 +137,13 @@ section {
 
 .header__title__sub::before,
 .header__title__sub::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 12px;
   height: 2px;
   margin: 0 8px;
   vertical-align: middle;
+  background: #fff;
 }
 
 /* concept section */
@@ -160,7 +181,7 @@ section {
   padding-bottom: 80px;
 }
 
-.concept-image {
+.concept__image {
   width: 100%;
   height: 400px;
   object-fit: cover; 
@@ -204,7 +225,7 @@ section {
   order: 4;
 }
 
-.work__content img {
+.work__content__img {
   margin-bottom: 16px;
 }
 
@@ -222,6 +243,7 @@ section {
 .florist__intro {
   display: flex;
   justify-content: space-between;
+  line-height: 1.8;
 }
 
 .florist__content {
@@ -230,16 +252,23 @@ section {
   line-height: 28px;
 }
 
+.florist__content img {
+  width: 100%;
+}
+
 /* shop information */
+.shop-information {
+  padding-bottom: 120px;
+}
+
 .shop-information__contents {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 120px;
   width: 100%;
   align-items: center;
 }
 
-.shop-information__img {
+.shop-information__img  {
   width: 50%;
 }
 
