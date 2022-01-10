@@ -126,7 +126,8 @@
 
   .shop-information__img,
   .shop-information__table {
-    width: 100%;    
+    width: 100%;   
+    -webkit-appearance: none; 
   }
 
   .shop-information__table br {
