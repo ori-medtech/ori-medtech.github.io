@@ -69,11 +69,14 @@ section {
   height: 64px;
 }
 
-.header__nav > .fixed {
+.fixed {
   position: fixed;
   top: 0;
   z-index: 100; 
   padding-top: 20px;
+  background: #fff;
+  color: black;
+  border-bottom: 1px solid #ededed;
 }
 
 .header__nav__wrapper {
@@ -132,6 +135,10 @@ section {
 .is-active > .hamburger-menu_line3 {
   transform: rotate(-45deg);
   top: 50%;
+}
+
+.changeColor {
+  background: black;
 }
 
 
